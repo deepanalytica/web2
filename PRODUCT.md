@@ -1,24 +1,18 @@
 # PRODUCT.md — Departamentos Luz
 
 ## Producto
-Vitrina digital para cuatro departamentos de arriendo en San Bernardo.
+Vitrina digital para cuatro departamentos amoblados en San Bernardo, Chile.
 
-## Audiencia
-Personas que buscan un departamento y quieren saber rápidamente qué unidades existen, si están disponibles, hasta cuándo están arrendadas, desde qué fecha vuelven a quedar libres y cómo consultar o coordinar una visita.
+## Objetivo
+Que una persona pueda ver los departamentos, revisar fotografías, saber si están disponibles, saber desde cuándo estarán disponibles, agendar una visita, consultar por WhatsApp y dejar sus datos para recibir un aviso cuando una unidad vuelva a quedar libre.
 
 ## Problema operativo
 La administración depende de publicaciones en Facebook, Messenger y llamadas. Eso obliga a subir o bajar avisos, responder las mismas preguntas y coordinar visitas manualmente.
 
-## Mecanismo
-Una sola URL mantiene estado por unidad, próxima fecha disponible, fotos y características, consulta contextual por WhatsApp, solicitud de visita y lista de disponibilidad.
-
-## Límites
-- Hay cuatro departamentos.
-- El MVP se publica en GitHub Pages.
-- La captura de avisos funciona hoy preparando un mensaje de WhatsApp; todavía no existe backend de newsletter.
-- No inventar fechas, precios, condiciones o disponibilidad.
-- Estados soportados: available, leased, soon, unknown.
-- Cuando exista fecha confirmada, mostrar “Arrendado hasta…” y/o “Disponible desde…”.
-
-## Éxito
-Una persona debe poder decidir en menos de un minuto si consultar, agendar o pedir un aviso sin obligar a Luz a explicar lo mismo desde cero.
+## Verdad del producto
+- Existen cuatro departamentos.
+- La unidad 1 tiene material fotográfico disponible en este MVP.
+- No se inventan fechas, precios, condiciones ni estados.
+- Estados soportados: `available`, `occupied`, `soon`, `unknown`.
+- Cuando existe fecha confirmada, la interfaz muestra `Arrendado hasta…` y/o `Disponible desde…`.
+- El MVP no tiene backend de newsletter: la lista de disponibilidad prepara una solicitud por WhatsApp con los datos ingresados.
