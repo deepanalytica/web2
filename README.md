@@ -1,29 +1,34 @@
-# Departamentos Luz — MVP
+# Departamentos Luz
 
-Vitrina pública orientada a reducir consultas repetidas y coordinación manual.
+Frontend estático publicado con GitHub Pages.
 
-## Funciones
-- Hero con rotación de fotografías y controles manuales.
-- Disponibilidad por unidad.
-- Estados: disponible, arrendado, disponible pronto y consultar.
-- Fechas “Arrendado hasta…” / “Disponible desde…” cuando se cargan.
-- Lista de disponibilidad con nombre/correo/teléfono y solicitud por WhatsApp.
-- Agenda de visita con fecha y horario.
-- Galería, FAQ, SVG icons y CTA móvil.
-- Accesibilidad: focus visible, reduced motion, skip link y estados con texto.
+## Arquitectura
+- `index.html`: estructura semántica y contenido.
+- `styles.css`: sistema de diseño, responsive y motion.
+- `app.js`: datos de disponibilidad, carrusel, formularios, FAQ, lightbox y WhatsApp.
+- `assets/`: fotografías optimizadas en WebP.
+- `PRODUCT.md`: verdad de producto.
+- `DESIGN.md`: decisiones visuales durables.
 
-## Actualizar disponibilidad
-Edita `PROPERTY_DATA` en `index.html`.
+## Disponibilidad
+La configuración está al inicio de `app.js` en `PROPERTIES`.
 
 Ejemplo:
 ```js
-{id:2,name:"Departamento 2",place:"San Bernardo",state:"leased",leasedUntil:"2027-02-28",availableFrom:"2027-03-01"}
+{
+  id: 2,
+  name: "Departamento 2",
+  location: "San Bernardo",
+  status: "occupied",
+  leasedUntil: "2026-10-13",
+  availableFrom: "2026-10-14",
+  featured: false
+}
 ```
 
-La interfaz formatea automáticamente la fecha en español.
+La interfaz mostrará automáticamente “Arrendado hasta 13 de octubre de 2026” y “Disponible desde 14 de octubre de 2026”.
 
-## Diseño
-Ver `DESIGN.md` y `PRODUCT.md`.
+No cargar fechas que no hayan sido confirmadas por Luz.
 
 ## Publicación
 GitHub Pages se despliega mediante `.github/workflows/pages.yml`.
