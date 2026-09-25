@@ -60,3 +60,4 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelector("#visitForm").addEventListener("submit",e=>{e.preventDefault();const v=id=>encodeURIComponent(document.getElementById(id).value||"Por coordinar");const text="Hola Luz, quiero solicitar una visita.%0A%0ANombre: "+v("name")+"%0ADepartamento: "+v("property")+"%0AFecha: "+v("date")+"%0AHorario: "+v("time")+"%0AComentario: "+v("msg");window.open("https://wa.me/56952239136?text="+text,"_blank")});
 </script>
 </body></html>
+<!-- GitHub Pages deploy refresh -->
