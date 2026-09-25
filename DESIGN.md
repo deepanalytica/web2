@@ -1,32 +1,29 @@
 # DESIGN.md — Departamentos Luz
 
-## Dirección
-Warm editorial rental guide: guía local, cuidada y humana. No SaaS, no portal inmobiliario corporativo, no lujo artificial.
+## Dirección visual
+Inmobiliaria boutique moderna, sencilla y accesible. La idea de “Luz” se expresa mediante iluminación ambiental, blancos cálidos, reflejos suaves, sombras cálidas, fotografías grandes y profundidad controlada. No usar iconografía obvia de sol o bombilla.
 
 ## Tipografía
-- Display: Instrument Serif 400.
-- UI/lectura: Instrument Sans 400–700.
-- Display máximo 5.2rem, tracking ≥ -0.035em.
-- Texto de lectura line-height 1.7.
+- Display: Instrument Serif.
+- UI y cuerpo: Inter.
+- Titulares editoriales con line-height cercano a 0.95 y tracking negativo moderado.
 
-## Color
-Canvas crema, tinta carbón, terracota para acción, verde solo para disponibilidad confirmada, ámbar para arrendado/próxima disponibilidad. Tokens semánticos en OKLCH.
+## Paleta
+- Canvas crema y blancos cálidos.
+- Terracota como acción principal.
+- Verde solo para disponibilidad confirmada.
+- Ámbar para arrendado o disponibilidad futura.
+- Neutros cálidos para estados por confirmar.
 
-## Layout
-Hero de copy + fotografía real rotativa. Disponibilidad como lista lineal, no card soup. Ficha con galería dominante. Sección de avisos oscura. Formularios abiertos. En móvil CTA persistente Avisarme/WhatsApp.
+## Ritmo
+Hero luminoso → trust strip → disponibilidad clara → galería fotográfica → sección oscura iluminada → visita luminosa → FAQ limpio → footer cálido.
 
-## Iconografía
-SVG lineal consistente, stroke 1.75. Sin emoji ni glifos Unicode como iconos.
-
-## Motion
-Un momento principal: carrusel del hero, 5.2 s, crossfade + scale mínimo. Pausa en hover/focus y respeta prefers-reduced-motion.
-
-## Estados
-available = Disponible ahora.
-leased = Arrendado; con fecha muestra Disponible desde…
-soon = Disponible pronto + fecha.
-unknown = Consultar disponibilidad.
-Color nunca es el único indicador.
-
-## Anti-patrones
-Sin gradiente de texto, card soup, eyebrows decorativos, iconos en cuadrados repetidos, azul SaaS, glassmorphism decorativo ni datos inventados.
+## Reglas
+- Carrusel: autoplay, pausa hover/focus, flechas, indicadores, teclado y swipe.
+- Disponibilidad: tabla premium en desktop y cards en mobile.
+- Galería asimétrica con lightbox.
+- Iconografía lineal consistente mediante un único sistema SVG.
+- Header sticky que se compacta con scroll.
+- Formularios con focus, validación y status.
+- `prefers-reduced-motion` obligatorio.
+- Evitar azul SaaS, card soup, glassmorphism decorativo y datos inventados.
